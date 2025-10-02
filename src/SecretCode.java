@@ -27,7 +27,7 @@ public class SecretCode extends Code {
         return combination.toString();
     }
 
-    public String combination(int length, int countOfSymbols) {
+    protected String combination(int length, int countOfSymbols) {
         Random random = new Random();
         ArrayList<Character> secretCode = new ArrayList<>();
         StringBuilder sb = new StringBuilder(length);

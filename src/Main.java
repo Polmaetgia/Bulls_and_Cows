@@ -6,7 +6,7 @@ public class Main {
         cowsAndBulls();
     }
 
-    public static String digitString(int countOfSymbols) {
+    private static String digitString(int countOfSymbols) {
         SecretCode secretCode = new SecretCode();
         String originalLine = secretCode.combination(countOfSymbols);
         StringBuilder digitString = new StringBuilder();
@@ -24,7 +24,7 @@ public class Main {
         return fistNumber + "-" + lastNumber;
     }
 
-    public static String letterString(int countOfSymbols) {
+    private static String letterString(int countOfSymbols) {
         SecretCode secretCode = new SecretCode();
         String originalLine = secretCode.combination(countOfSymbols);
         StringBuilder letterString = new StringBuilder();
@@ -42,7 +42,7 @@ public class Main {
     }
 
 
-    public static String message(int bulls, int cows, String secretCode) {
+    private static String message(int bulls, int cows, String secretCode) {
         StringBuilder sb = new StringBuilder();
         sb.append("Grade: ");
         if (bulls == 0) {
@@ -79,7 +79,7 @@ public class Main {
         return sb.toString();
     }
 
-    public static boolean flag(int length, int countOfSymbols) {
+    private static boolean flag(int length, int countOfSymbols) {
         if (length > countOfSymbols) {
             System.out.printf("Error: it's not possible to generate a code with a length of %d with " +
                     "%d unique symbols.\n", length, countOfSymbols);
@@ -96,7 +96,7 @@ public class Main {
         return true;
     }
 
-    public static void cowsAndBulls() {
+    private static void cowsAndBulls() {
         Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("Input the length of the secret code:");
