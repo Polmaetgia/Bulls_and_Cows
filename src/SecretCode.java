@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class SecretCode extends Code {
 
-    public String combination() {
+    protected String combination() {
         StringBuilder alphabetAndNumbers = new StringBuilder(36);
         for (char c = '0'; c <= '9'; c++) {
             alphabetAndNumbers.append(c);
@@ -14,7 +14,7 @@ public class SecretCode extends Code {
         return alphabetAndNumbers.toString();
     }
 
-    public String combination(int countOfSymbols) {
+    protected String combination(int countOfSymbols) {
         String alphabetAndNumbers = combination();
         StringBuilder combination = new StringBuilder(countOfSymbols);
         for (int i = 0; i < alphabetAndNumbers.length(); i++) {
